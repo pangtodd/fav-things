@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang= en US>
+<html lang="en US">
 <head>
   <link href="CSS/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="CSS/styles.css" rel="stylesheet" type="text/css">
@@ -14,15 +14,7 @@
       <p>You have favorite things, I have favorite things. Let's see how they compare! Enter your favorite things and hit submit.</p>
         <form id="formOne">
           <div class="form-group">
-            <label for="favCar">Favorite car (whether you owned it or not)</label>
-            <input id="favCar" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="favShoe">Favorite shoe- specifically, sneaker</label>
-            <input id="favShoe" class="form-control" type="text">
-          </div>
-          <div class="form-group"></div>
-          <h3>Peanut butter: smooth or chunky?</h3>
+            <h3>Peanut butter: smooth or chunky?</h3>
             <div class="radio">
               <label>
                 <input type="radio" name="favPb" value="smooth" checked>
@@ -35,16 +27,24 @@
                 Chunky peanut butter
               </label>
             </div>
+          </div>
+          <div class="form-group">
+            <label for="favCar">Favorite car (whether you owned it or not)</label>
+            <input id="favCar" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="favShoe">Favorite shoe- specifically, sneaker</label>
+            <input id="favShoe" class="form-control" type="text">
+          </div>
           <h3>Okay, that's enough data. Let's compare!</h3>
-          <button type="submit" class="btn">Let's Go!</button>
+          <button type="submit" class="btn">Lets go!</button>
         </form>
     </div>
     <div id="result">
       <div class= row>
         <div class="col-6">
           <h3>your results</h3>
-          <ul class = "results">
-
+          <ul id= "answers">
           </ul> 
         </div>
         <div class="col-6">
@@ -61,14 +61,15 @@
       <h1>Based on your responses...I'm alerting the authorities. I hope you take some time to reflect on what lead you to this point.</h1>
       <p>Have you reflected on how you were wrong?</p>
       <div class = "refresh">
-        <button type="refresh" class="btn">retake the quiz</button>
+        <button class="btn btn-primary" id="refresh">retake the quiz</button>
       </div>
     </div>
     <div id ="analysis-good">
       <h1>Based on your responses, you are a kind person with an awesome style. And a productive member of society. Keep up the good work!</h1>
       <div class = "refresh">
-        <button type="refresh" class="btn">retake the quiz</button>
+        <button class="btn btn-primary" id="refresh">retake the quiz</button>
       </div>
+    </div>
   </div>
 </body>
 </html>
