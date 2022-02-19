@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  $("form#formOne").submit(function(event) {
+  $("form#formOne").submit(function(event){
+    event.preventDefault();
     $("#questions").hide();
     const answers = [];
     
@@ -11,19 +12,24 @@ $(document).ready(function(){
 
     
     $("#result").show();
-      
-    if(answers.includes("chunky")) {
-      $("#analysis-good").show();
-    } else {
-      $("#analysis-bad").show();
-    }
+    const stringAnswers = answers.join(" ");      
+    
+    if (stringAnswers.includes("rius")){
+        $("#analysis-good").show();
+      } else if (stringAnswers.includes("azz")) {
+        $("#analysis-good").show();
+      } else if (stringAnswers.includes("chunky")){
+        $("#analysis-good").show();
+      } else {
+        $("#analysis-bad").show();
+      }
+    });
 
     $("button#refresh").click(function() {
       location.reload(true);
     });
 
-    event.preventDefault();
-  });
-});
+  
+  })
 
 
